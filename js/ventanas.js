@@ -8,6 +8,7 @@ function intercambiar(i,f){
  f.style.visibility = "visible";
 }
 
+//-----------------------------------------------------------------------------------------
 text1=primer.elemento("label").texto("Edificio");
 in1= primer.input().cnombre("a").ctype("text").cplaceholder("Edificio").tipo("redondo").cid("busqueda");
 s1=primer.boton("Buscar").tboton("verde").cid("buscar").cp("onclick","intercambiar(co,co2)");
@@ -22,7 +23,7 @@ f1= primer.columna().componer([c1.centrar(),c2.centrar()]);
 //f3=primer.columna().componer([c7.centrar(),c8.centrar()]);
 
 co = primer.contenedor().componer([f1]);
-//--------------------------------------------
+//-----------------------------------------------------------------------------------------
  li1=primer.elemento("li").texto("XY");
  li2=primer.elemento("li").texto("ab");
 
@@ -36,3 +37,4 @@ co = primer.contenedor().componer([f1]);
 
  co2 = primer.contenedor().componer([f4,f5]);
  co2.style.visibility = "hidden";
+//-----------------------------------------------------------------------------------------

@@ -7,7 +7,7 @@ var Acciones= (function(){
 
 			var _obv= function(id){
 				var in1 = document.getElementById(id);
-				return in1.value;
+				return in1.value || " ";
 			};
 		return{
 			"cp":_cp_1_2,

@@ -1,6 +1,6 @@
 sa="";
 function bus(){
- sa=Departamentostrabajadores.imprimir(Departamentostrabajadores.conEdificio(Acciones.obv("busqueda"),Departamentostrabajadores.unionarre(Empresa.trabajadores(),Empresa.departamentos())))
+ return Departamentostrabajadores.imprimir(Departamentostrabajadores.conEdificio(Acciones.obv("busqueda"),Departamentostrabajadores.unionarre(Empresa.trabajadores(),Empresa.departamentos())))
 }
 
 function intercambiar(i,f){
@@ -11,7 +11,7 @@ function intercambiar(i,f){
 //-----------------------------------------------------------------------------------------
 text1=primer.elemento("label").texto("Edificio");
 in1= primer.input().cnombre("a").ctype("text").cplaceholder("Edificio").tipo("redondo").cid("busqueda");
-s1=primer.boton("Buscar").tboton("verde").cid("buscar").cp("onclick","intercambiar(co,co2)");
+s1=primer.boton("Buscar").tboton("verde").cid("buscar").cp("onclick","intercambiar(co,co2);li1.texto(bus())");
 
 //boton1.addEventListener("click",Acciones.cp,false);
 
@@ -28,7 +28,7 @@ co = primer.contenedor().componer([f1]);
  li2=primer.elemento("li").texto("ab");
 
  ol=primer.elemento("ol").componer([li1,li2]);
- c9=primer.grilla("3").componer([ol]);
+ c9=primer.grilla("4").componer([ol]);
  f4=primer.columna().componer([c9.centrar()]);
 
  s2=primer.boton("Volver").tboton("verde").cid("volver").cp("onclick","intercambiar(co2,co)");;

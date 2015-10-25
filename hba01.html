@@ -1,0 +1,20 @@
+<!DOCTYPE HTML><html><head><meta charset=utf-8>
+<meta name=viewport content=width=device-width>
+<title></title>
+    </head>
+<body>
+
+    <script src=js/empresa.js></script>
+    <script src=js/trabajadores.js></script>
+    <script src=js/departamentos.js></script>
+    <script src=js/departamentostrabajadores.js></script>
+    <script src=js/trabajadoresdepartamentos.js></script>
+
+    <p>Trabajadores.imprimir_en_pantalla(Empresa.trabajadores())</p>
+    <p>Departamentos.imprimir(Departamentostrabajadores.edificiotrabajador(Trabajadores.connombre("juan"),Empresa.departamentos()))</p>
+    <p>Departamentostrabajadores.porEdificio(Departamentostrabajadores.edificiotrabajador(Trabajadores.connombre("juan"),Empresa.departamentos()), Empresa.trabajadores())</p>
+    <p>Departamentostrabajadores.unionarre(Empresa.trabajadores(),Empresa.departamentos())</p>
+    <p>Trabajadoresdepartamentos.imprimir(Trabajadoresdepartamentos.unionarre(Empresa.departamentos(),Empresa.trabajadores()))</p>
+    <p>Departamentostrabajadores.imprimir(Departamentostrabajadores.conEdificio("A",Departamentostrabajadores.unionarre(Empresa.trabajadores(),Empresa.departamentos())))</p>
+</body>
+</html>

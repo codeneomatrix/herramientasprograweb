@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script type="text/javascript" src="js/acciones.js"></script>
+	<title>Document2</title>
+</head>
+<body>
+<input type="text" id="i1" placeholder="1">
+<input type="text" id="i2" placeholder="1">
+	
+<button  id="boton1">boton</button>
+
+
+<script type="text/javascript">
+		var boton1 = document.getElementById("boton1");
+		boton1.addEventListener("click",Acciones.cp,false);
+
+</script>
+</body>
+</html>

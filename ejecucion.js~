@@ -1,0 +1,27 @@
+s1= pure.boton("rojo")
+s2= pure.boton("","jajja")
+i= pure.i("carrito")
+pure.componer(s2,[i])
+
+in1= pure.input("","","redondo")
+ck1= pure.checkbox("elemento");
+op= pure.option("ja");
+op1= pure.option("ja2");
+op2= pure.option("ja3");
+combo= pure.combobox("risas",[op,op1,op2]);
+burad= pure.buttonradio("elementoradio");
+bf= pure.boton("azul","continuar","submit")
+for1= pure.formulario("stack","Super formulario",[in1,ck1,combo,burad,bf])
+
+g0= pure.grilla("5","5");
+g1= pure.grilla("3","1");
+g2= pure.grilla();
+c = pure.contenedor();
+
+pure.componer(g1,[s1,g0,for1]);
+pure.componer(g2,[s2]);
+pure.componer(c,[g1,g2]);
+
+
+pure.agregar("ventana",[c])
+

@@ -9,9 +9,15 @@ var Acciones= (function(){
 				var in1 = document.getElementById(id);
 				return in1.value || " ";
 			};
+
+			var _mostrar= function(text){
+				console.log(text);
+			};
+
 		return{
 			"cp":_cp_1_2,
-			"obv":_obv
+			"obv":_obv,
+			"mostrar":_mostrar
 		};
 
 		})();

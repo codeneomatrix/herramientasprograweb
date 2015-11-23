@@ -1,0 +1,48 @@
+### CORS
+
+El presente ejemplo demuestra el acceso desde un dominio (nombre de host y puerto)
+a otro dominio haciendo uso de XMLHttpRequest así como el "problema" causado por
+CORS. Se recomiendan las lecturas indicadas más abajo.
+
+### Lecturas
+
+* Nuevos trucos para XMLHttpRequest2
+  http://www.html5rocks.com/es/tutorials/file/xhr2/
+
+* ¿Que es CORS ?
+  http://www.arquitecturajava.com/que-es-cors/
+
+* Intercambio de datos entre páginas: SOP, CORS y WebMessage (I)
+  http://blog.elevenpaths.com/2013/12/intercambio-de-datos-entre-paginas-sop.html
+
+* Intercambio de datos entre páginas: SOP, CORS y WebMessage (y II)
+  http://blog.elevenpaths.com/2014/01/intercambio-de-datos-entre-paginas-sop.html
+
+* Sopa de Siglas: AJAX, JSON, JSONP y CORS
+  http://blog.koalite.com/2012/03/sopa-de-siglas-ajax-json-jsonp-y-cors/
+
+### Notas
+
+Los archivos *router.php* modifican las *cabeceras de HTTP* para
+permitir el acceso al recurso *csv/nombres.csv* desde el dominio *http://127.0.0.1:8000*
+
+### Instrucciones
+
+1.- Accede al directorio *cliente01* y ejecuta:
+
+    $ thttpd -D -p 8000 -l -
+
+2.- Accede al directorio *servidor01* y ejecuta:
+
+    $ php -S 127.0.0.1:9001 router.php
+
+3.- Accede al directorio *servidor02* y ejecuta:
+
+    $ php -S 127.0.0.1:9002 router.php
+
+4.- Accede al directorio *servidor03* y ejecuta:
+
+    $ php -S 127.0.0.1:9003 router.php
+
+5.- Accede mediante firefox a *http://127.0.0.1:8000* y observa lo impreso
+    en la *Consola* de Firebug.
